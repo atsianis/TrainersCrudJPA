@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>TrainerServlet</servlet-name>
+        <servlet-class>controllers.TrainerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddTrainer</servlet-name>
+        <servlet-class>controllers.AddTrainer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteTrainer</servlet-name>
+        <servlet-class>controllers.DeleteTrainer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateTrainer</servlet-name>
+        <servlet-class>controllers.UpdateTrainer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrainerServlet</servlet-name>
+        <url-pattern>/trainers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddTrainer</servlet-name>
+        <url-pattern>/addtrainer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteTrainer</servlet-name>
+        <url-pattern>/deletetrainer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateTrainer</servlet-name>
+        <url-pattern>/updatetrainer</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
