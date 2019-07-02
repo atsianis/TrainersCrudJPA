@@ -9,7 +9,7 @@ public class TrainerService {
     
     public List<Trainer> getTrainers(){
         TrainerDao tdao = new TrainerDao();
-        return tdao.getTrainers();
+        return tdao.getTrainersJPA();
     }
     
     public boolean addTrainer(Trainer t){

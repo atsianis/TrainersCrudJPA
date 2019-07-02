@@ -16,7 +16,7 @@
     </head>
         <h1>Update Trainer</h1>
         <form method="POST" action="updatetrainer">
-            <input type="number" hidden name="id" value=" <%= t.getId() %> " />           
+            <input type="hidden" name="id" value="<%= t.getId() %>" />           
             First Name: <input name="name" type="text" value="<%= t.getFname() %>"/><br />
             Last Name: <input name="surname" type="text" value="<%= t.getLname() %>"/><br />
             <input type="Submit" name="new" value="Update Trainer" /><br />

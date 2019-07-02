@@ -86,13 +86,24 @@ public class UpdateTrainer extends HttpServlet {
             throws ServletException, IOException {
         TrainerService ts = new TrainerService();
         Trainer t = new Trainer();
+        try{
+        t.setId((Integer.parseInt(request.getParameter("id"))));
+            System.out.println(t.getId());
+        }catch(Exception e){
+            System.out.println("problem here");
+        
+        }
+        
         t.setFname(request.getParameter("name"));
         t.setLname(request.getParameter("surname"));
-        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-                if(ts.updateTrainer(t)) out.println("All Updated!"); else out.println("Nothing Updated!");
-    }
+            if(ts.updateTrainer(t)){
+                out.println("All Updated!");
+            }else{
+                out.println("Nothing Updated!");
+            };
+        }
     }
 
     /**

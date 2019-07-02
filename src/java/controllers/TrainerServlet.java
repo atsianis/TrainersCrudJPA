@@ -73,7 +73,7 @@ public class TrainerServlet extends HttpServlet {
             out.println("<tr><td>ID</td><td>First Name</td><td>Last Name</td></tr>");
             
             for (Trainer t:ts.getTrainers()){
-            out.println("<tr><td>"+t.getId()+"</td><td>"+t.getFname()+"</td><td>"+t.getLname()+"</td><td><a href=\"deletetrainer?id=\""+t.getId()+">Delete</a><a href=\"updatetrainer.jsp?id=\""+t.getId()+">Update</a></td></tr>");
+            out.println("<tr><td>"+t.getId()+"</td><td>"+t.getFname()+"</td><td>"+t.getLname()+"</td><td><a href=\"deletetrainer?id="+t.getId()+"\">Delete</a><a href=\"updatetrainer?id="+t.getId()+"\">Update</a></td></tr>");
             }
                     
             out.println("</table>");
